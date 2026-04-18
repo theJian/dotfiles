@@ -1,0 +1,124 @@
+[user]
+	email = hi@chabuduo.in
+	name = Jiàn
+	signingkey = ~/.ssh/id_rsa.pub
+[alias]
+	pl = pull
+	ps = push
+	lg = log --first-parent --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	s = switch
+	st = status -s
+	ci = commit
+	cm = commit -m
+	aa = add --all
+	co = "!git add --all && git commit"
+	branch-prune = "!git branch --merged | grep -v '\\*' | grep -v 'master' | xargs -n 1 git branch -d"
+	branch-remote-prune = "!git branch -r --merged | grep -v '\\*' | grep -v 'master' | sed 's|origin/||' | xargs -n 1 git push --delete origin"
+	uncommit = reset --soft HEAD^
+	discard = reset --hard
+	back = checkout HEAD~
+	forward = checkout HEAD@{1}
+	backup = "!git add --all && git commit -m \"backup `date +'%m-%d-%y %H:%M'`\""
+	pushall = "!git remote | xargs -L1 git push --all"
+	wip = !git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout:' | grep -oE '[^ ]+ ~ .*' | awk -F~ '!seen[$1]++' | head -n 13 | awk -F' ~ HEAD@{' '{printf(\"  \\033[33m%s: \\033[34m %s\\033[0m\\n\", $1, substr($2, 1, length($2)-1))}' | column -t -s:
+	# up = !git fetch origin && git rebase origin/master
+	sync = "!f() { git fetch origin $1 && git reset --hard origin/$1; }; f"
+	b = switch -c
+	go = !git branch|fzy|xargs git checkout
+	pushf = push --force-with-lease
+	pr = "!f() { git fetch origin pull/$1/head:pr-$1 && git checkout pr-$1; }; f"
+    # `git log` with patches shown with difftastic.
+    dlg = -c diff.external=difft log -p --ext-diff
+    # Show the most recent commit with difftastic.
+    dshow = -c diff.external=difft show --ext-diff
+    # `git diff` with difftastic.
+    ddf = -c diff.external=difft diff
+	refresh = commit --amend --no-edit
+[core]
+	pager = delta
+	editor = nvim --noplugin
+	autocrlf = input
+	whitespace = -trailing-space
+	attributesfile = ~/.gitattributes
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+	light = true
+	navigate = true
+	syntax-theme = GitHub
+	true-color = always
+[status]
+	submodulesummary = true
+	showUntrackedFiles = all
+[pull]
+	rebase = merges
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
+[color "status"]
+	branch = blue bold ul
+	added = green
+	changed = yellow
+	untracked = red
+	unmerged = red reverse
+	renamed = white
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[commit]
+	verbose = true
+	gpgsign = true
+[push]
+	followTags = true
+	default = current
+	autoSetupRemote = true
+[fetch]
+	prune = true
+[rerere]
+	enabled = true
+[color "diff"]
+	meta = yellow
+[merge]
+	tool = vimdiff
+	conflictStyle = zdiff3
+[mergetool]
+	keepBackup = false
+	prompt = false
+[mergetool "vimdiff"]
+	cmd = $EDITOR -f -c \"Gdiffsplit!\" \"$MERGED\"
+[diff]
+	colorMoved = default
+	algorithm = histogram
+	tool = difftastic
+[init]
+	defaultBranch = main
+[difftool]
+	prompt = false
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+	difftool = true
+[maintenance]
+	repo = /Users/jian/g/decode-core-hub
+[rebase]
+	instructionFormat = %s (%an <%ae>)
+[gpg]
+	format = ssh
+[credential]
+	helper =
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[merge "mergiraf"]
+	name = mergiraf
+	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
