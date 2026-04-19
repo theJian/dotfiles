@@ -1,0 +1,64 @@
+theme = "modus_operandi"
+
+[editor]
+line-number = "relative"
+mouse = false
+cursorline = true
+cursorcolumn = true
+color-modes = true
+end-of-line-diagnostics = "hint"
+completion-timeout = 100
+popup-border = "popup"
+
+[editor.statusline]
+center = ["version-control"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "·" 
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.auto-save]
+focus-lost = true
+after-delay.enable = true
+after-delay.timeout = 1500
+
+[keys.insert]
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+pageup = "no_op"
+pagedown = "no_op"
+home = "no_op"
+end = "no_op"
+
+[keys.normal]
+# ":" = "collapse_selection"
+# ";" = "command_mode"
+
+[keys.select]
+# ":" = "collapse_selection"
+# ";" = "command_mode"

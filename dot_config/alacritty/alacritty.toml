@@ -1,0 +1,39 @@
+[general]
+import = [
+	"~/.config/alacritty/moonwalk.toml"
+]
+live_config_reload = true
+
+[font]
+size = 13
+builtin_box_drawing = true
+
+[font.normal]
+family = "CommitMono Nerd Font Mono"
+
+[[keyboard.bindings]]
+action = "ToggleSimpleFullscreen"
+key = "F"
+mods = "Command|Control"
+
+[mouse]
+hide_when_typing = true
+
+[terminal.shell]
+program = "/opt/homebrew/bin/nu"
+
+[window]
+decorations = "Buttonless"
+opacity = 0.94
+startup_mode = "Maximized"
+option_as_alt = "Both"
+
+[terminal]
+
+[cursor]
+thickness = 0.3
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
