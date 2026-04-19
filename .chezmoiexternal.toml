@@ -1,4 +1,0 @@
-[".config/nvim"]
-    type = "git-repo"
-    url = "https://github.com/theJian/vim-config.git"
-    refreshPeriod = "168h"
