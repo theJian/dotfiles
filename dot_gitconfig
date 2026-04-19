@@ -85,7 +85,7 @@
 	meta = yellow
 [merge]
 	tool = vimdiff
-	conflictStyle = zdiff3
+	conflictStyle = diff3
 [mergetool]
 	keepBackup = false
 	prompt = false
