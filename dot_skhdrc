@@ -1,0 +1,8 @@
+rcmd - 1 : open /Applications/Alacritty.app
+rcmd - 2 : open /Applications/Google\ Chrome.app
+rcmd - 3 : open /Applications/Zen.app
+rcmd - 4 : open /System/Library/CoreServices/Finder.app
+rcmd - 5 : open -a Mail
+
+rcmd - 9 : open /Applications/Discord.app
+rcmd - 0 : open /Applications/LarkSuite.app
