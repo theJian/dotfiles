@@ -6,33 +6,12 @@ Include ~/.orbstack/ssh/config
 Host *
 	ServerAliveInterval 240
 
-Host pi
-	HostName 192.168.0.111
-	User pi
-
 Host github.com
 	AddKeysToAgent yes
 	UseKeychain yes
-	IdentityFile ~/.ssh/git
-
-Host bitbucket.org
-	HostName bitbucket.org
 	IdentityFile ~/.ssh/git
 
 Host git.sr.ht
 	HostName git.sr.ht
 	IdentityFile ~/.ssh/git
 
-Host jpddx
-	HostName jp1-ip-2.ddx.world
-	User ubuntu
-	IdentityFile ~/.ssh/proxy.jp.pem
-
-Host sgddx
-	HostName sg1-ip-6.ddx.world
-	User ubuntu
-	IdentityFile ~/.ssh/proxy.sg.pem
-
-Host dev
-	HostName 192.168.2.64
-	User jian
