@@ -1,0 +1,29 @@
+set relativenumber
+set hlsearch
+set incsearch
+set matchpairs
+set showmode
+set showcmd
+
+nnoremap / :action Find<CR>
+nnoremap <space>w :action SaveAll<CR>
+nnoremap <space>h :<C-u>split<CR>
+nnoremap <space>v :<C-u>vsplit<CR>
+nnoremap <space>f :action GotoFile<CR>
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-q> <C-w>q
+vnoremap < <gv
+vnoremap > >gv
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-u> <esc>g~iwea
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
+
+set commentary
+set surround
