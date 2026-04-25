@@ -122,3 +122,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[pack]
+	allowPackReuse = multi
+[advice]
+	pushAlreadyExists = true
