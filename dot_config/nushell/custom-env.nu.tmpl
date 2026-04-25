@@ -1,0 +1,39 @@
+use std/util "path add"
+
+export-env {
+	load-env {
+		EDITOR: "nvim",
+		VISUAL: "nvim",
+		BAT_THEME: "GitHub",
+		BUN_INSTALL: $"($env.HOME)/.bun",
+		DEEPSEEK_API_KEY: "{{ gopass "api/deepseek" }}",
+		OPENROUTER_API_KEY: "{{ gopass "api/openrouter" }}",
+		CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: 1,
+		JAVA_HOME: "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home"
+		ANDROID_HOME: $"($env.HOME)/Library/Android/sdk"
+	}
+
+	path add "/usr/local/bin"
+	path add "/usr/bin"
+	path add "/bin"
+	path add "/usr/sbin"
+	path add "/sbin"
+	path add "/usr/local/go/bin"
+
+	path add "/opt/homebrew/bin"
+	path add "/opt/homebrew/sbin"
+	path add "/home/linuxbrew/.linuxbrew/bin"
+	path add "/home/linuxbrew/.linuxbrew/sbin"
+
+	path add "/opt/homebrew/opt/openjdk/bin"
+	path add $"($env.HOME)/.volta/bin"
+	path add $"($env.HOME)/.local/bin"
+	path add $"($env.HOME)/.cargo/bin"
+	path add $"($env.HOME)/.moon/bin"
+	path add $"($env.HOME)/.modular/bin"
+	path add $"(^go env GOPATH)/bin"
+	path add $"($env.BUN_INSTALL)/bin"
+	path add $"($env.ANDROID_HOME)/emulator"
+	path add $"($env.ANDROID_HOME)/platform-tools"
+	path add $"($env.HOME)/.opencode/bin"
+}
