@@ -2,6 +2,14 @@
 
 Personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 
+## Dependencies
+
+Install with [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle):
+
+```bash
+brew bundle
+```
+
 ## Quick start
 
 ```bash
