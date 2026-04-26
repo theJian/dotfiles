@@ -8,6 +8,7 @@ export-env {
 		BUN_INSTALL: $"($env.HOME)/.bun",
 		DEEPSEEK_API_KEY: "{{ gopass "api/deepseek" }}",
 		OPENROUTER_API_KEY: "{{ gopass "api/openrouter" }}",
+		TAVILY_API_KEY: "{{ gopass "api/tavily" }}",
 		CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC: 1,
 		JAVA_HOME: "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home"
 		ANDROID_HOME: $"($env.HOME)/Library/Android/sdk"
