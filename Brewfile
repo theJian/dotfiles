@@ -1,4 +1,3 @@
-tap "railwaycat/emacsmacport"
 tap "xcodesorg/made"
 brew "age"
 brew "asdf"
