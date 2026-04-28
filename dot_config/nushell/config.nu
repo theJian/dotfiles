@@ -15,3 +15,7 @@ $env.config.color_config = (moonwalk)
 alias vi = nvim
 
 $env.GPG_TTY = (tty | str trim)
+
+# Ensure mise autoload directory exists and generate the activation script
+mkdir ($nu.user-autoload-dirs | first)
+^mise activate nu | save -f ($nu.user-autoload-dirs | first | path join "mise.nu")
