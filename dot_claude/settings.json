@@ -1,6 +1,7 @@
 {
   "env": {
-    "CLAUDE_CODE_EFFORT_LEVEL": "max"
+    "CLAUDE_CODE_EFFORT_LEVEL": "max",
+    "CLAUDE_CODE_ATTRIBUTION_HEADER": "0"
   },
   "includeCoAuthoredBy": false,
   "permissions": {
