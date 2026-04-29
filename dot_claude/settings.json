@@ -1,5 +1,7 @@
 {
-  "env": {},
+  "env": {
+    "CLAUDE_CODE_EFFORT_LEVEL": "max"
+  },
   "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
