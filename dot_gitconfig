@@ -126,3 +126,5 @@
 	allowPackReuse = multi
 [advice]
 	pushAlreadyExists = true
+[feature]
+	manyFiles = true
