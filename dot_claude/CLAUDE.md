@@ -2,6 +2,7 @@
 - For non-trivial tasks, follow: **Explore → Plan → Code → Verify**
 - Read relevant files BEFORE proposing edits. Do not guess at APIs
 - For ambiguous requests, ask ONE clarifying question rather than guessing
+- For file search or grep in the current git-indexed directory, use `fff` tools
 
 ### 2. Minimize Surface Area of Changes
 - Make the smallest change that solves the problem
