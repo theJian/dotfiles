@@ -6,6 +6,7 @@ export-env {
 		VISUAL: "nvim",
 		BAT_THEME: "GitHub",
 		BUN_INSTALL: $"($env.HOME)/.bun",
+		HF_TOKEN: "{{ gopass "api/hf" }}"
 		DEEPSEEK_API_KEY: "{{ gopass "api/deepseek" }}",
 		OPENROUTER_API_KEY: "{{ gopass "api/openrouter" }}",
 		TAVILY_API_KEY: "{{ gopass "api/tavily" }}",
