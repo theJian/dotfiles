@@ -3,36 +3,60 @@
 	name = Jiàn
 	signingkey = ~/.ssh/id_rsa.pub
 [alias]
+	# Shorthand for pull
 	pl = pull
+	# Shorthand for push
 	ps = push
+	# Pretty log: first-parent graph, relative dates, colored authors
 	lg = log --first-parent --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	# Shorthand for switch
 	s = switch
+	# Short status
 	st = status -s
+	# Shorthand for commit (opens editor)
 	ci = commit
+	# Commit with inline message
 	cm = commit -m
+	# Stage all changes
 	aa = add --all
+	# Stage all then commit (opens editor)
 	co = "!git add --all && git commit"
+	# Delete local branches already merged into current branch
 	branch-prune = "!git branch --merged | grep -v '\\*' | grep -v 'master' | xargs -n 1 git branch -d"
+	# Delete remote branches already merged (on origin)
 	branch-remote-prune = "!git branch -r --merged | grep -v '\\*' | grep -v 'master' | sed 's|origin/||' | xargs -n 1 git push --delete origin"
+	# Undo last commit, keep changes staged
 	uncommit = reset --soft HEAD^
+	# Hard reset: discard all uncommitted changes
 	discard = reset --hard
+	# Checkout previous HEAD
 	back = checkout HEAD~
+	# Checkout next HEAD (undo a 'back')
 	forward = checkout HEAD@{1}
+	# Commit all changes with a timestamped backup message
 	backup = "!git add --all && git commit -m \"backup `date +'%m-%d-%y %H:%M'`\""
+	# Push current branch to all remotes
 	pushall = "!git remote | xargs -L1 git push --all"
+	# Show recent branch switches from reflog (WIP navigation)
 	wip = !git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout:' | grep -oE '[^ ]+ ~ .*' | awk -F~ '!seen[$1]++' | head -n 13 | awk -F' ~ HEAD@{' '{printf(\"  \\033[33m%s: \\033[34m %s\\033[0m\\n\", $1, substr($2, 1, length($2)-1))}' | column -t -s:
 	# up = !git fetch origin && git rebase origin/master
+	# Fetch a remote branch and hard-reset to it (sync local to remote)
 	sync = "!f() { git fetch origin $1 && git reset --hard origin/$1; }; f"
+	# Create and switch to a new branch
 	b = switch -c
+	# Interactive branch checkout via fzy fuzzy finder
 	go = !git branch|fzy|xargs git checkout
+	# Force push with lease (safe: only if remote matches your last fetch)
 	pushf = push --force-with-lease
+	# Fetch and checkout a GitHub PR by number
 	pr = "!f() { git fetch origin pull/$1/head:pr-$1 && git checkout pr-$1; }; f"
-    # `git log` with patches shown with difftastic.
+    # Log with difftastic side-by-side diff
     dlg = -c diff.external=difft log -p --ext-diff
-    # Show the most recent commit with difftastic.
+    # Show last commit with difftastic diff
     dshow = -c diff.external=difft show --ext-diff
-    # `git diff` with difftastic.
+    # Diff with difftastic
     ddf = -c diff.external=difft diff
+	# Amend last commit without editing message (refresh snapshot)
 	refresh = commit --amend --no-edit
 [core]
 	pager = delta
