@@ -6,7 +6,7 @@
     "DISABLE_COST_WARNINGS": "1",
     "DISABLE_INSTALLATION_CHECKS": "1",
     "ENABLE_TOOL_SEARCH": "true",
-    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": 1,
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_CODE_FORK_SUBAGENT": "1",
     "ANTHROPIC_BASE_URL": "https://api.deepseek.com/anthropic",
@@ -36,7 +36,7 @@
       "Read(**/*.pem)",
       "Read(**/.env)"
     ],
-    "defaultMode": "default"
+    "defaultMode": "acceptEdits"
   },
   "enableAllProjectMcpServers": true,
   "hooks": {
@@ -67,6 +67,22 @@
     "type": "command",
     "command": "/Users/jian/.claude/abtop-statusline.sh"
   },
+  "worktree": {
+    "baseRef": "head"
+  },
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true,
+    "excludedCommands": ["docker *", "git *", "gh *"],
+    "filesystem": {
+      "denyRead": ["~/.aws/credentials", "~/.ssh", "~/.netrc"]
+    },
+    "network": {
+      "allowAllUnixSockets": true,
+      "allowedDomains": ["github.com", "*.npmjs.org", "registry.yarnpkg.com"],
+      "allowLocalBinding": true
+    }
+  },
   "enabledPlugins": {
     "clangd-lsp@claude-plugins-official": true,
     "figma@claude-plugins-official": true,
@@ -81,7 +97,7 @@
   },
   "skipWebFetchPreflight": true,
   "alwaysThinkingEnabled": true,
-  "effortLevel": "xhigh",
+  "effortLevel": "max",
   "autoDreamEnabled": true,
   "skipDangerousModePermissionPrompt": true,
   "gitAttribution": false
