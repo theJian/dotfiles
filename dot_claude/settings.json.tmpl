@@ -63,25 +63,12 @@
       }
     ]
   },
-  "statusLine": {
-    "type": "command",
-    "command": "/Users/jian/.claude/abtop-statusline.sh"
-  },
   "worktree": {
     "baseRef": "head"
   },
-  "sandbox": {
-    "enabled": true,
-    "autoAllowBashIfSandboxed": true,
-    "excludedCommands": ["docker *", "git *", "gh *"],
-    "filesystem": {
-      "denyRead": ["~/.aws/credentials", "~/.ssh", "~/.netrc"]
-    },
-    "network": {
-      "allowAllUnixSockets": true,
-      "allowedDomains": ["github.com", "*.npmjs.org", "registry.yarnpkg.com"],
-      "allowLocalBinding": true
-    }
+  "statusLine": {
+    "type": "command",
+    "command": "/Users/jian/.claude/abtop-statusline.sh"
   },
   "enabledPlugins": {
     "clangd-lsp@claude-plugins-official": true,
@@ -96,9 +83,24 @@
     "superpowers@claude-plugins-official": true
   },
   "skipWebFetchPreflight": true,
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true,
+    "network": {
+      "allowedDomains": ["github.com", "*.npmjs.org", "registry.yarnpkg.com"],
+      "allowAllUnixSockets": true,
+      "allowLocalBinding": true
+    },
+    "filesystem": {
+      "denyRead": ["~/.aws/credentials", "~/.ssh", "~/.netrc"]
+    },
+    "excludedCommands": ["docker *", "git *", "gh *"]
+  },
   "alwaysThinkingEnabled": true,
   "effortLevel": "max",
   "autoDreamEnabled": true,
   "skipDangerousModePermissionPrompt": true,
-  "gitAttribution": false
+  "gitAttribution": false,
+  "theme": "light",
+  "teammateMode": "auto"
 }
