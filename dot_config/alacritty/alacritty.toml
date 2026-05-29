@@ -20,7 +20,7 @@ mods = "Command|Control"
 hide_when_typing = true
 
 [terminal.shell]
-program = "/opt/homebrew/bin/nu"
+program = "/opt/homebrew/bin/fish"
 
 [window]
 decorations = "Buttonless"
