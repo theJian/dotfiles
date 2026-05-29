@@ -17,5 +17,8 @@ fish_add_path --global $HOME/.opencode/bin
 fish_add_path --global $BUN_INSTALL/bin
 fish_add_path --global $ANDROID_HOME/emulator
 fish_add_path --global $ANDROID_HOME/platform-tools
-fish_add_path --global (go env GOPATH)/bin
+fish_add_path --global /usr/local/go/bin
+if command -q go; and go env GOPATH &>/dev/null
+    fish_add_path --global (go env GOPATH)/bin
+end
 fish_add_path --global /opt/homebrew/opt/openjdk/bin
