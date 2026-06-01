@@ -1,2 +1,10 @@
 [tools]
-ruby = "3"
+aube = "latest"
+node = "26"
+
+[settings]
+idiomatic_version_file_enable_tools = ["node", "python"]
+color_theme = "auto"
+
+[settings.node]
+corepack = true
