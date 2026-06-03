@@ -16,7 +16,7 @@ set --global fish_color_operator     494440
 set --global fish_color_escape       00566B
 
 # --- Prompt Elements ---
-set --global fish_color_cwd          0D50C5
+set --global fish_color_cwd          0D50C5 --background=ffebd1
 set --global fish_color_cwd_root     AF1608
 set --global fish_color_user         002FA7
 set --global fish_color_host         --reset
