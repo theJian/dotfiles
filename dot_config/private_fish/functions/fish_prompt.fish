@@ -36,8 +36,9 @@ function fish_prompt --description 'Write out the prompt'
     set -l statusb_color (set_color $bold_flag $fish_color_status)
     set -l prompt_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
 
-	set -l bunny_eyes '•᷅•᷄' '˃˂' 'ˊˋ' '-•' '--' '..' '••' 'ᵔᵔ' '◕◕' "''" '•᷄•᷅' '◟◞' '˘˘' '°°' '╹╹' '≖≖'
+    set -l bunny_eyes (random choice '•᷅•᷄' '˃˂' 'ˊˋ' '-•' '--' '..' '••' 'ᵔᵔ' '◕◕' "''" '•᷄•᷅' '◟◞' '˘˘' '°°' '╹╹' '≖≖')
+    set -l bunny_color (random choice blue cyan purple green)
 
-    echo -s    (set_color blue) "" (set_color $color_cwd) (prompt_pwd) $normal (fish_vcs_prompt) $normal " "$prompt_status
-	echo -n -s (set_color blue) "" $normal (set_color -b blue brwhite) (random choice $bunny_eyes) $normal (set_color blue) ""  $normal $suffix " "
+    echo -s    (set_color $bunny_color) "" (set_color $color_cwd) (prompt_pwd) $normal (fish_vcs_prompt) $normal " "$prompt_status
+    echo -n -s (set_color $bunny_color) "" $normal (set_color -b $bunny_color brwhite) $bunny_eyes $normal (set_color $bunny_color) ""  $normal $suffix " "
 end
