@@ -88,7 +88,7 @@
     "filesystem": {
       "denyRead": ["~/.aws/credentials", "~/.ssh", "~/.netrc"]
     },
-    "excludedCommands": ["docker *", "git *", "gh *", "npx *"]
+    "excludedCommands": ["docker *", "git *", "gh *", "npx ctx7*"]
   },
   "alwaysThinkingEnabled": true,
   "autoDreamEnabled": true,
