@@ -18,7 +18,8 @@
       "Bash(ls:*)",
       "Bash(git commit:*)",
       "Bash(lark-cli *)",
-      "Bash(git clone:*)"
+      "Bash(git clone:*)",
+      "mcp__fff__*"
     ],
     "deny": [
       "Read(node_modules/**)",
