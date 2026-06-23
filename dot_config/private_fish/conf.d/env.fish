@@ -9,6 +9,7 @@ set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 set -gx ANDROID_HOME $HOME/Library/Android/sdk
 
 # User binary paths
+fish_add_path --global /usr/local/bin
 fish_add_path --global $HOME/.local/bin
 fish_add_path --global $HOME/.cargo/bin
 fish_add_path --global $HOME/.moon/bin
