@@ -75,21 +75,36 @@
     "typescript-lsp@claude-plugins-official": true,
     "kotlin-lsp@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
-    "security-guidance@claude-plugins-official": true
+    "security-guidance@claude-plugins-official": true,
+    "sentry-cli@claude-plugins-official": true
   },
   "skipWebFetchPreflight": true,
   "sandbox": {
     "enabled": true,
     "autoAllowBashIfSandboxed": true,
     "network": {
-      "allowedDomains": ["github.com", "*.npmjs.org", "registry.yarnpkg.com"],
+      "allowedDomains": [
+        "github.com",
+        "*.npmjs.org",
+        "registry.yarnpkg.com"
+      ],
       "allowAllUnixSockets": true,
       "allowLocalBinding": true
     },
     "filesystem": {
-      "denyRead": ["~/.aws/credentials", "~/.ssh", "~/.netrc"]
+      "denyRead": [
+        "~/.aws/credentials",
+        "~/.ssh",
+        "~/.netrc"
+      ]
     },
-    "excludedCommands": ["docker *", "git *", "gh *", "npx ctx7*"]
+    "excludedCommands": [
+      "docker *",
+      "git *",
+      "gh *",
+      "npx ctx7*",
+      "npx chrome-devtools-mcp*"
+    ]
   },
   "alwaysThinkingEnabled": true,
   "autoDreamEnabled": true,
