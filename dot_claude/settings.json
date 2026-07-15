@@ -111,5 +111,6 @@
   "skipDangerousModePermissionPrompt": true,
   "theme": "light",
   "teammateMode": "auto",
-  "gitAttribution": false
+  "gitAttribution": false,
+  "skipWorkflowUsageWarning": true
 }
