@@ -3,7 +3,7 @@ aube = "latest"
 node = "26"
 
 [settings]
-idiomatic_version_file_enable_tools = ["node", "python"]
+idiomatic_version_file_enable_tools = ["node", "python", "pnpm"]
 color_theme = "auto"
 
 [settings.node]
