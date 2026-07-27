@@ -10,6 +10,7 @@
 
 - Make the smallest change that solves the problem.
 - Do not refactor unrelated code unless asked.
+- When requirements change, revise the implementation and tests as if the final requirement had been given from the start; do not preserve superseded behavior unless explicitly requested.
 
 ### 3. Honesty Over Optimism
 

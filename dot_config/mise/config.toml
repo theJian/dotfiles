@@ -1,6 +1,7 @@
 [tools]
 aube = "latest"
 node = "26"
+pnpm = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "python", "pnpm"]
