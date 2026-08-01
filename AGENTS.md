@@ -21,6 +21,7 @@
 ## Tool Preferences
 
 - Use the fff MCP tools for all file search operations instead of default tools.
+- For Python projects, prefer `uv` for dependency management, virtual environments, and running Python tooling unless the project explicitly requires another workflow.
 
 ## Code Style Preferences
 
