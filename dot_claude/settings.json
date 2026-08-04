@@ -112,5 +112,10 @@
   "theme": "light",
   "teammateMode": "auto",
   "gitAttribution": false,
+  "attribution": {
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
+  },
   "skipWorkflowUsageWarning": true
 }
