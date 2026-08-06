@@ -33,6 +33,5 @@
 
 ## Git and Commits
 
-- Use `but` when available; otherwise, use `git`.
 - Use Conventional Commits prefixes: `feat:`, `fix:`, `refactor:`, `docs:`, `test:`, and `chore:`.
 - Keep commits atomic and scoped to one logical change.
