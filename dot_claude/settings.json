@@ -23,7 +23,6 @@
     ],
     "deny": [
       "Read(node_modules/**)",
-      "Write(node_modules/**)",
       "Edit(node_modules/**)",
       "Read(~/.ssh/**)",
       "Read(**/*.key)",
