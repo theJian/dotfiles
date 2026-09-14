@@ -1,5 +1,6 @@
 brew "age"
 brew "asdf"
+brew "aria2"
 brew "openssl@3"
 brew "bat"
 brew "xz"
