@@ -15,6 +15,7 @@ fish_add_path --global $HOME/.cargo/bin
 fish_add_path --global $HOME/.moon/bin
 fish_add_path --global $HOME/.modular/bin
 fish_add_path --global $HOME/.opencode/bin
+fish_add_path --global $HOME/.lmstudio/bin
 fish_add_path --global $BUN_INSTALL/bin
 fish_add_path --global $ANDROID_HOME/emulator
 fish_add_path --global $ANDROID_HOME/platform-tools
