@@ -21,6 +21,10 @@
       org-directory "~/org/"
       scroll-margin 3)
 
+;; Emacs can inherit NO_COLOR from its launcher; Ghostel supports color.
+(after! ghostel
+  (add-to-list 'ghostel-environment "NO_COLOR"))
+
 ;; Moonwalk's lualine uses a padded, colored block for the editing mode.
 (after! doom-modeline
   (dolist (modeline doom-modeline--modelines)
