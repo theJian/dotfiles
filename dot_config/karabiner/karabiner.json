@@ -42,25 +42,9 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "e: Emacs",
+                                "description": "e: Alacritty",
                                 "from": {
                                     "key_code": "e",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Emacs'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "tab_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "t: Alacritty",
-                                "from": {
-                                    "key_code": "t",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Alacritty'" }],
