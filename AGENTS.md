@@ -31,6 +31,10 @@
 - Functions should do one thing and do it well.
 - Comments should explain why, not what.
 
+## Writing Guidelines
+
+- Write self-contained documents and comments.
+
 ## Git and Commits
 
 - Use Conventional Commits prefixes: `feat:`, `fix:`, `refactor:`, `docs:`, `test:`, and `chore:`.
