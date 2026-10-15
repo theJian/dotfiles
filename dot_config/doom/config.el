@@ -9,7 +9,7 @@
     (set-frame-parameter nil 'fullscreen 'maximized)))
 (add-hook 'window-setup-hook #'j/maximize-frame-h t)
 
-;; Match Alacritty's coding font (Nerd Font variant for icon glyphs).
+;; Use CommitMono at size 15, with Nerd Font glyphs for icons.
 (setq doom-font (font-spec :family "CommitMono Nerd Font Mono" :size 15))
 
 ;; Avoid a missing Symbols font falling back to icons wider than their cells.
@@ -20,10 +20,6 @@
       display-line-numbers-type 'relative
       org-directory "~/org/"
       scroll-margin 3)
-
-;; Emacs can inherit NO_COLOR from its launcher; Ghostel supports color.
-(after! ghostel
-  (add-to-list 'ghostel-environment "NO_COLOR"))
 
 ;; Moonwalk's lualine uses a padded, colored block for the editing mode.
 (after! doom-modeline
@@ -44,19 +40,6 @@
                             'face (if (doom-modeline--active) face 'mode-line-inactive)
                             'help-echo "Evil editing state")
                 (doom-modeline-spc))))))
-
-(defun j/whitespace-h ()
-  (if (derived-mode-p 'prog-mode 'text-mode)
-      (when (and buffer-file-name (not buffer-read-only)
-                 (not (bound-and-true-p so-long-mode))
-                 (not (bound-and-true-p so-long-minor-mode)))
-        (require 'whitespace)
-        (setq-local whitespace-style '(face tabs tab-mark trailing))
-        (whitespace-mode 1))
-    (+whitespace-highlight-incorrect-indentation-h)))
-;; Configure whitespace once, after the major mode has established indentation.
-(remove-hook 'after-change-major-mode-hook #'+whitespace-highlight-incorrect-indentation-h)
-(add-hook 'after-change-major-mode-hook #'j/whitespace-h t)
 
 (after! evil
   (setq evil-ex-search-case 'smart evil-search-wrap nil
@@ -110,8 +93,6 @@
   (map! :map +dashboard-mode-map
         [remap j/next-line] #'forward-button
         [remap j/previous-line] #'backward-button))
-
-(map! :leader :desc "Toggle fold" "SPC" #'+fold/toggle)
 
 ;; Ex uses completion-at-point rather than Vertico's completing-read interface.
 (defun j/ex-completion-h ()

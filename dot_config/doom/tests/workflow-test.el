@@ -39,7 +39,6 @@
     (should (eq (lookup-key doom-leader-map (kbd "x")) 'doom/toggle-scratch-buffer))
     (load (expand-file-name "config.el" doom-user-dir) nil t)
     (should (equal menus (mapcar (lambda (k) (lookup-key doom-leader-map (kbd k))) '("f" "g" "h" "t")))))
-  (should (eq (lookup-key doom-leader-map (kbd "SPC")) '+fold/toggle))
   (with-temp-buffer
     (evil-local-mode 1)
     (evil-normal-state)
