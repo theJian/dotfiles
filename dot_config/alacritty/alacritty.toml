@@ -6,7 +6,7 @@ live_config_reload = true
 
 [font]
 size = 13
-builtin_box_drawing = true
+# builtin_box_drawing = true
 
 [font.normal]
 family = "CommitMono Nerd Font Mono"
