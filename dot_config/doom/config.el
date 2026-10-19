@@ -103,3 +103,8 @@
 (after! corfu
   ;; Run after Corfu's default minibuffer setup, which has depth 100.
   (add-hook 'minibuffer-setup-hook #'j/ex-completion-h 110))
+
+(use-package! mason
+  :demand t
+  :config
+  (mason-setup))
