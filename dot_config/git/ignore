@@ -4,3 +4,5 @@ node_modules/
 .superpowers/
 
 **/.claude/.cc-writes/
+
+nvim.log
