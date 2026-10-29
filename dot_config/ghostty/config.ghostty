@@ -1,0 +1,7 @@
+theme = Moonwalk
+
+font-family = CommitMono Nerd Font Mono
+font-family = UnifontExMono
+font-size = 14
+macos-titlebar-style = tabs
+macos-window-buttons = hidden
