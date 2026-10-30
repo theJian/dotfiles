@@ -1,0 +1,18 @@
+{
+  "lastChangelogVersion": "1.4.0",
+  "theme": "system",
+  "defaultProvider": "minimax-cn",
+  "defaultModel": "MiniMax-M3.1-Flash",
+  "packages": [
+    "npm:@ff-labs/pi-fff",
+    "npm:@upstash/context7-pi"
+  ],
+  "defaultThinkingLevel": "max",
+  "enableInstallTelemetry": false,
+  "defaultProjectTrust": "ask",
+  "doubleEscapeAction": "tree",
+  "modelThinkingLevels": {
+    "xiaomi-token-plan-cn/mimo-v2.6-pro": "high"
+  },
+  "tuiMode": "regular"
+}

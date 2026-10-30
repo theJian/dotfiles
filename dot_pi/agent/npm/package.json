@@ -1,0 +1,8 @@
+{
+  "name": "pi-extensions",
+  "private": true,
+  "dependencies": {
+    "@ff-labs/pi-fff": "^0.11.0",
+    "@upstash/context7-pi": "^0.1.3"
+  }
+}
