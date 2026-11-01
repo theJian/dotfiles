@@ -10,7 +10,7 @@
 
 - Make the smallest change that solves the problem.
 - Do not refactor unrelated code unless asked.
-- When requirements change, revise the implementation and tests as if the final requirement had been given from the start; do not preserve superseded behavior unless explicitly requested.
+- Reflect the final design, not the path taken.
 
 ### 3. Honesty Over Optimism
 
@@ -21,21 +21,24 @@
 ## Tool Preferences
 
 - Use the fff MCP tools for all file search operations instead of default tools.
-- For Python projects, prefer `uv` for dependency management, virtual environments, and running Python tooling unless the project explicitly requires another workflow.
+- Prefer `uv` for Python tooling unless the project requires otherwise.
 
 ## Code Style Preferences
 
-- Favor compact, modern, readable syntax.
-- Prefer declarative, data-driven patterns over imperative control flow.
+- Prioritize readability; write self-documenting code.
+- Prefer declarative, data-driven patterns when they improve clarity.
 - Prefer explicit behavior over implicit behavior or magic.
-- Functions should do one thing and do it well.
+- Avoid magic numbers in code.
 - Comments should explain why, not what.
 
 ## Writing Guidelines
 
 - Write self-contained documents and comments.
+- Use plain language and consistent terminology; prefer short, direct sentences.
+- Lead with the main point and explain one topic at a time; preserve necessary context.
 
 ## Git and Commits
 
-- Use Conventional Commits prefixes: `feat:`, `fix:`, `refactor:`, `docs:`, `test:`, and `chore:`.
+- Use conventional commits prefixes, e.g. `feat:`.
+- Use conventional branch prefixes, e.g. `feat/`.
 - Keep commits atomic and scoped to one logical change.
