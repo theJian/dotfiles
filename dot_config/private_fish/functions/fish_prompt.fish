@@ -44,36 +44,41 @@ function fish_prompt --description 'Write out the prompt'
 end
 
 function fish_prompt_invader --description 'Display a random colored pixel alien'
-    # Each color:bitmap entry packs an 8x8 sprite into two rows of Braille.
-    # Dark shades keep the sprites readable on light terminal backgrounds.
+    # Reference sprites run left to right, top to bottom; each is an 8x8 bitmap.
+    # Octants use U+1CD00–U+1CDE5 plus existing Unicode equivalents for omitted fills.
     set -l sprites
 
-    # Crimson
-    set -a sprites 'a61b3c:⣵⢶⢶⡅⠹⠛⠻⠁'
+    set -a sprites '▚𜷙𜷈▞𜵣𜴣𜴔𜶝'
+    set -a sprites '𜺠𜶩𜵯𜺣𜶐𜴗𜴦𜵆'
+    set -a sprites '𜷡𜶩𜵯𜷞▞𜴪𜴪▚'
+    set -a sprites '𜶆𜶜𜵡𜵚𜵓𜵏𜶛𜶁'
+    set -a sprites '𜵺𜷞𜷡𜴺𜶕𜴔𜴣𜵍'
+    set -a sprites '𜷍𜶨𜵭𜶼𜵍𜴏𜴢𜶕'
+    set -a sprites '𜷋𜶪𜵮𜶻𜶐𜴓𜴟𜵆'
+    set -a sprites '𜴄𜷄𜷑𜴁𜶪𜵬𜶣𜵮'
+    set -a sprites '▝𜶄𜵙▘𜶤𜵬𜶣𜵥'
+    set -a sprites '𜷡𜶫𜵰𜷞𜷍𜶫𜵰𜶼'
+    set -a sprites '𜵳𜶩𜵯𜴸𜴚𜵍𜶕𜴊'
+    set -a sprites '𜶘𜵼𜵁𜵊𜴡𜵝𜶌𜴍'
+    set -a sprites '𜷋𜶪𜵮𜶻𜵔𜵰𜶫𜶃'
+    set -a sprites '𜷡██𜷞𜵺𜶧𜵨𜴺'
+    set -a sprites '𜵸𜶼𜷍𜴹𜵞𜵐𜶚𜶎'
+    set -a sprites '𜶢𜶜𜵡𜵪▐𜴕𜴥▌'
 
-    # Ochre
-    set -a sprites '806000:⡬⣶⡮⡄⠩⠏⠯⠁'
-
-    # Teal
-    set -a sprites '006b60:⢈⣆⣎⠀⠽⠚⠺⠅'
-
-    # Blue
-    set -a sprites '005a9c:⣨⣦⣮⡀⠽⠞⠾⠅'
-
-    # Burnt orange
-    set -a sprites '994500:⣴⣳⣳⡄⠨⠋⠫⠀'
-
-    # Raspberry
-    set -a sprites '9d2459:⢈⣖⣎⠀⠻⠺⠺⠃'
-
-    # Slate
-    set -a sprites '334155:⣵⢶⢶⡅⠙⠟⠟⠁'
-
-    set -l sprite (string split : -- (random choice $sprites))
-    set -l color (set_color $sprite[1])
+    # Four color stops run from brighter left to darker right on both rows.
+    set -l gradients a61b3c:901734:7b142d:651025 806000:6f5300:5e4600:4d3900 008577:007266:005e54:004b43 0077bb:0066a1:005688:00456e b85b00:a04f00:894400:713800 b52d69:9e275c:87224e:701c41 536780:47596e:3c4a5d:303c4b
+    set -l sprite (random choice $sprites)
+    set -l gradient (string split : -- (random choice $gradients))
+    set -l rows (string sub -s 1 -l 4 -- $sprite) (string sub -s 5 -l 4 -- $sprite)
     set -l normal (set_color --reset)
 
-    for row in (string sub -s 1 -l 4 -- $sprite[2]) (string sub -s 5 -l 4 -- $sprite[2])
-        printf '⠀%s%s%s⠀\n' "$color" "$row" "$normal"
+    for row in $rows
+        printf ' '
+        for column in 1 2 3 4
+            set -l color (set_color --bold $gradient[$column])
+            printf '%s%s' "$color" (string sub -s $column -l 1 -- "$row")
+        end
+        printf '%s \n' "$normal"
     end
 end
+

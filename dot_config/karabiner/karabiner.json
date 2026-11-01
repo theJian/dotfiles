@@ -47,7 +47,7 @@
                                     "key_code": "e",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Alacritty'" }],
+                                "to": [{ "shell_command": "open -a Ghostty" }],
                                 "type": "basic"
                             },
                             {

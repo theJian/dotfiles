@@ -1,7 +1,12 @@
 theme = Moonwalk
 
-font-family = CommitMono Nerd Font Mono
-font-family = UnifontExMono
-font-size = 14
+font-family = SF Mono
+# https://www.kreativekorp.com/software/fonts/fairfaxhd/
+font-family = Fairfax HD
+font-family = Symbols Nerd Font Mono
+
+adjust-cursor-thickness = 3
+adjust-underline-thickness = 1
 macos-titlebar-style = tabs
 macos-window-buttons = hidden
+font-thicken = true
