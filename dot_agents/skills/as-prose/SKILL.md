@@ -48,7 +48,3 @@ Supply the actual paths and constraints with this brief:
 > 4. **Explanatory quality:** Deeper explanations are accurate, locally understandable, and effective. Examples clarify difficult concepts rather than restating mechanics; their absence is not a defect when none are needed.
 >
 > Report concrete findings with locations, reader impact, and minimal suggestions. Separate material defects from subjective polish. Rate honestly: 10 means no material improvement is needed under this rubric, not theoretical perfection. Do not inflate scores to satisfy an assumed target.
-
-## Delivery
-
-Summarize meaningful changes, validation, and review results. Attribute ratings to the independent reviewers rather than presenting them as objective proof. If the target was not reached, report the actual score and remaining issues. Include the full review transcript only if requested.
