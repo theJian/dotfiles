@@ -1,6 +1,6 @@
 ---
 name: as-prose
-description: Make code and its documentation clear to engineers encountering it for the first time. Use for readability refactors, clearer naming, and concise, accurate comments and public API documentation in any programming language.
+description: Improve the clarity and discoverability of code and its documentation. Clarify names, structure, comments, and public API documentation for engineers encountering the code for the first time, in any programming language.
 ---
 
 # As Prose

@@ -25,11 +25,10 @@
 
 ## Code Style Preferences
 
-- Prioritize readability; write self-documenting code.
+- Use the `as-prose` skill when writing or modifying code.
 - Prefer declarative, data-driven patterns when they improve clarity.
 - Prefer explicit behavior over implicit behavior or magic.
 - Avoid magic numbers in code.
-- Comments should explain why, not what.
 
 ## Writing Guidelines
 
