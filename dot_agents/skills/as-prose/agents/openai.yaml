@@ -1,0 +1,4 @@
+interface:
+  display_name: "As Prose"
+  short_description: "Make code and documentation clear to new readers"
+  default_prompt: "Use $as-prose to make this code and its documentation clear, concise, and easy to understand."
