@@ -3,8 +3,6 @@ name: as-prose
 description: Improve the clarity and discoverability of code and its documentation. Clarify names, structure, comments, and public API documentation for engineers encountering the code for the first time.
 ---
 
-# As Prose
-
 Let names and structure explain the mechanics, public documentation explain the contract, and implementation comments explain reasoning the code cannot express.
 
 ## Readability principles
