@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "1.4.0",
+  "lastChangelogVersion": "1.5.0",
   "theme": "system",
   "defaultProvider": "minimax-cn",
   "defaultModel": "MiniMax-M3.1-Flash",
