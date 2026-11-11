@@ -25,7 +25,7 @@
 
 ## Code Style Preferences
 
-- Use the `as-prose` skill when writing or modifying code.
+- Write code for people to read and change safely: use clear names, simple control flow, and comments explaining non-obvious decisions.
 - Prefer declarative, data-driven patterns when they improve clarity.
 - Prefer explicit behavior over implicit behavior or magic.
 - Avoid magic numbers in code.
