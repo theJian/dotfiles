@@ -7,12 +7,16 @@
     "npm:@ff-labs/pi-fff",
     "npm:@upstash/context7-pi"
   ],
-  "defaultThinkingLevel": "max",
+  "defaultThinkingLevel": "xhigh",
   "enableInstallTelemetry": false,
   "defaultProjectTrust": "ask",
   "doubleEscapeAction": "tree",
   "modelThinkingLevels": {
     "xiaomi-token-plan-cn/mimo-v2.6-pro": "high"
   },
-  "tuiMode": "regular"
+  "tuiMode": "regular",
+  "showHardwareCursor": true,
+  "outputPad": 0,
+  "hideThinkingBlock": true,
+  "quietStartup": true
 }
