@@ -1,6 +1,5 @@
 {
   "env": {
-    "CLAUDE_CODE_EFFORT_LEVEL": "max",
     "CLAUDE_CODE_ATTRIBUTION_HEADER": "0",
     "CLAUDE_CODE_NEW_INIT": "1",
     "DISABLE_COST_WARNINGS": "1",
@@ -10,17 +9,7 @@
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_CODE_FORK_SUBAGENT": "1"
   },
-  "includeCoAuthoredBy": false,
   "permissions": {
-    "allow": [
-      "Bash(mkdir:*)",
-      "Bash(mv:*)",
-      "Bash(ls:*)",
-      "Bash(git commit:*)",
-      "Bash(lark-cli *)",
-      "Bash(git clone:*)",
-      "mcp__fff__*"
-    ],
     "deny": [
       "Read(node_modules/**)",
       "Edit(node_modules/**)",
@@ -28,93 +17,27 @@
       "Read(**/*.key)",
       "Read(**/*.pem)",
       "Read(**/.env)"
-    ],
-    "defaultMode": "acceptEdits"
-  },
-  "enableAllProjectMcpServers": true,
-  "hooks": {
-    "Notification": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "osascript -e 'display notification \"Claude Code needs your attention\" with title \"Claude Code\" sound name \"Ping\"'"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash ~/.claude/notify_on_finish.sh"
-          }
-        ]
-      }
     ]
   },
   "worktree": {
-    "baseRef": "head"
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "/Users/jian/.claude/abtop-statusline.sh"
+    "baseRef": "fresh",
+    "symlinkDirectories": ["node_modules"]
   },
   "enabledPlugins": {
     "clangd-lsp@claude-plugins-official": true,
-    "figma@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
     "lua-lsp@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true,
-    "sentry@claude-plugins-official": true,
     "swift-lsp@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "kotlin-lsp@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true,
-    "security-guidance@claude-plugins-official": true,
-    "sentry-cli@claude-plugins-official": true
+    "security-guidance@claude-plugins-official": true
   },
   "skipWebFetchPreflight": true,
-  "sandbox": {
-    "enabled": true,
-    "autoAllowBashIfSandboxed": true,
-    "network": {
-      "allowedDomains": [
-        "github.com",
-        "*.npmjs.org",
-        "registry.yarnpkg.com"
-      ],
-      "allowAllUnixSockets": true,
-      "allowLocalBinding": true
-    },
-    "filesystem": {
-      "denyRead": [
-        "~/.aws/credentials",
-        "~/.ssh",
-        "~/.netrc"
-      ]
-    },
-    "excludedCommands": [
-      "docker *",
-      "git *",
-      "gh *",
-      "npx ctx7*",
-      "npx chrome-devtools-mcp*"
-    ]
-  },
-  "alwaysThinkingEnabled": true,
-  "autoDreamEnabled": true,
-  "skipDangerousModePermissionPrompt": true,
   "theme": "light",
-  "teammateMode": "auto",
-  "gitAttribution": false,
   "attribution": {
     "commit": "",
     "pr": "",
     "sessionUrl": false
-  },
-  "skipWorkflowUsageWarning": true
+  }
 }
